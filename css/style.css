@@ -1,0 +1,140 @@
+:root{
+     --bg-color: #FFFFFF;
+    --holder-color: #1F271B;
+    --accent-color: #DCC7BE;
+    --strong-accent: #CBB9A8;
+    --action-color: #067BC2;
+    --active-action: #00008F;
+    --search-color :#FF3864;
+    --search-active :#E00031;
+}
+body{
+    background-color: var(--bg-color);
+    overflow-x:hidden;
+}
+.mk-background{
+    background-color: var(--holder-color);
+}
+a, #text-logo{
+    color: var(--accent-color) !important;
+}
+h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
+    color: var(--strong-accent) !important;
+}
+.mk-icon{
+    color: var(--strong-accent);
+}
+.mk-clear{
+    --bs-gutter-x: 0rem;
+  }
+.page{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+.mk-part-page{
+    min-height: 60vh;
+  }
+  .mk-page{
+      min-height: 92vh;
+  }
+  .mk-solo-page{
+    min-height: 77vh;
+  }
+  .mk-introduction{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--holder-color);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.navbar{
+    min-height: 8vh;
+  }
+#landing-page{
+  padding: 0px;
+  background-image: url(../imgs/main.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#search-holder{
+    width: 70%;
+    margin: 0% auto;
+    min-height: 8vh;
+    display: flex;
+    position: relative;
+    gap: 10px;
+    align-items: center;
+}
+#search-header{
+    font-size: 1.5em;
+}
+.search-input{
+    text-align: left;
+    padding: 3px;
+    padding-left: 30px !important;
+    height: 5vh;
+}
+.mk-button{
+    background-color: var(--action-color);
+    text-decoration: none;
+    color: var(--bg-color) !important;
+    text-align: center;
+    height: 5vh;
+    line-height: 5vh;
+}
+.mk-button:hover{
+    background-color: var(--active-action);
+    color: var(--bg-color) !important;
+}
+.search-button{
+    background-color: var(--search-color);
+    color: var(--bg-color) !important;
+}
+.search-button:hover{
+    background-color: var(--search-active);
+    color: var(--bg-color) !important;
+}
+#landing-input-holder{
+    position: relative;
+    margin-bottom: 6vh;
+}
+#landing-input{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+#landing-search{
+    width: 25%;
+    position: absolute;
+    left: 75%;
+    opacity: 0;
+}
+#landing-search-icon{
+    position: absolute;
+    left: 10px;
+    z-index: 2;
+    font-size: 1.25em;
+    height: 5vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 768px){
+
+}
+@media screen and (min-width: 992px){
+    .navbar{
+        height: 8vh;
+        padding: 0% 2% 0% 2%;
+    }
+    .mk-introduction{
+        width: 30vw;
+        min-width: 30vw;
+        min-height: 20vh;
+        border-radius: 5%;
+    }
+}
