@@ -67,7 +67,7 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
   background-position: center;
 }
 #search-holder{
-    width: 70%;
+    width: 80%;
     margin: 0% auto;
     min-height: 8vh;
     display: flex;
@@ -89,7 +89,6 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
     text-decoration: none;
     color: var(--bg-color) !important;
     height: 5vh;
-    line-height: 5vh;
 }
 .mk-button:hover{
     background-color: var(--active-action);
@@ -116,6 +115,12 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
     width: 25%;
     position: absolute;
     left: 75%;
+    opacity: 0;
+}
+#landing-filter{
+    width: 25%;
+    position: absolute;
+    left: 50%;
     opacity: 0;
 }
 #landing-search-icon{
