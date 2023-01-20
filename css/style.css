@@ -27,6 +27,12 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
 .mk-clear{
     --bs-gutter-x: 0rem;
   }
+.mk-text-center{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 .page{
     position: relative;
     display: flex;
@@ -82,7 +88,6 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
     background-color: var(--action-color);
     text-decoration: none;
     color: var(--bg-color) !important;
-    text-align: center;
     height: 5vh;
     line-height: 5vh;
 }
@@ -119,7 +124,6 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
     z-index: 2;
     font-size: 1.25em;
     height: 5vh;
-    text-align: center;
     display: flex;
     align-items: center;
 }
