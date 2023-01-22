@@ -3,10 +3,14 @@
     --holder-color: #1F271B;
     --accent-color: #DCC7BE;
     --strong-accent: #CBB9A8;
+    --light-action: #47a7e2;
     --action-color: #067BC2;
     --active-action: #00008F;
     --search-color :#FF3864;
     --search-active :#E00031;
+}
+*{
+    position: relative;
 }
 body{
     background-color: var(--bg-color);
@@ -18,7 +22,7 @@ body{
 a, #text-logo{
     color: var(--accent-color) !important;
 }
-h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
+h1,h2,p,a:hover,.h4:hover, #text-logo:hover, *{
     color: var(--strong-accent) !important;
 }
 .mk-icon{
@@ -48,6 +52,58 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
   .mk-solo-page{
     min-height: 77vh;
   }
+  .mk-modal {
+    display: none;
+    position: fixed !important;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .mk-modal-content {
+    display: hidden;
+    margin: 15% auto;
+    background-color: var(--action-color);
+    color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid var(--holder-color);
+    width: 90%;
+    border-radius: 1.5%;
+    z-index: 3;
+  }
+  label{
+    color: #FFFFFF !important;
+  }
+  .modal-label{
+    width: 100%;
+    text-align: center;
+  }
+  input{
+    color: var(--holder-color) !important;
+  }
+  .modal-input{
+    background-color: var(--holder-color);
+    padding: 5px;
+    color: #FFFFFF !important;
+    text-align: center;
+    border: 0px;
+    }
+    option:disabled{
+        color: #888 !important;
+    }
+    .modal-option{
+        color: #FFFFFF !important;
+    }
+    .modal-holder{
+        margin-bottom: 0.5vh;
+    }
+    .modal-button{
+        margin-top: 5%;
+        color: #FFFFFF !important;
+    }
   .mk-introduction{
     width: 100vw;
     height: 15vh;
@@ -111,22 +167,16 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
     position: absolute;
     left: 0px;
 }
-#landing-search{
+#landing-filter{
     width: 25%;
     position: absolute;
     left: 75%;
     opacity: 0;
 }
-#landing-filter{
-    width: 25%;
-    position: absolute;
-    left: 50%;
-    opacity: 0;
-}
 #landing-search-icon{
     position: absolute;
     left: 10px;
-    z-index: 2;
+    z-index: 1;
     font-size: 1.25em;
     height: 5vh;
     display: flex;
@@ -145,5 +195,14 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover{
         min-width: 30vw;
         min-height: 20vh;
         border-radius: 5%;
+    }
+    .mk-modal-content{
+        width: 50%;
+    }
+    .modal-label{
+        text-align: left;
+    }
+    .modal-input{
+        text-align: left;
     }
 }
