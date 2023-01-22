@@ -55,8 +55,8 @@
                                   </select>
                               </div>
                               <div class="col-lg-6 modal-holder">
-                                  <label class="modal-label " for="sorting">Sorting</label>
-                                      <select class="w-100 modal-input" type="number" name="type" id="type">
+                                  <label class="modal-label " for="Sorting">Sorting</label>
+                                      <select class="w-100 modal-input" type="number" name="Sorting" id="Sorting">
                                           <!--In the future, generate options dynamically-->
                                           <option selected="selected" disabled value="0">Select an option</option>
                                           <option class="modal-option" value="PriceA">By price (Cheapest)</option>
@@ -64,17 +64,29 @@
                                       </select>
                               </div>
                               <div class="col-lg-6 modal-holder">
-                                  <label class="modal-label" for="size">Minimum size in feet</label>
+                                  <label class="modal-label" for="SizeMi">Minimum size in feet</label>
                                   <div>
-                                      <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="size" id="size">
+                                      <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="SizeMi" id="SizeMi">
                                   </div>
                               </div>
                               <div class="col-lg-6 modal-holder">
-                                  <label class="modal-label" for="size">Maximum size in feet</label>
+                                  <label class="modal-label" for="SizeMa">Maximum size in feet</label>
                                   <div>
-                                      <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="size" id="size">
+                                      <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="SizeMa" id="SizeMa">
                                   </div>
                               </div>
+                              <div class="col-lg-6 modal-holder">
+                                <label class="modal-label" for="PriceMi">Minimum price</label>
+                                <div>
+                                    <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="PriceMi" id="PriceMi">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 modal-holder">
+                              <label class="modal-label" for="PriceMa">Maximum price</label>
+                              <div>
+                                  <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="PriceMa" id="PriceMa">
+                              </div>
+                          </div>
                               <div class="col-lg-6 modal-holder">
                                   <button class="w-100 modal-button btn btn-danger">Close</button>
                               </div>
