@@ -11,7 +11,7 @@ $(window).ready(function(){
     apply.click(function(event){event.preventDefault();hideFilterModal()});
     filters.click(function(event){event.preventDefault();showFilterModal()});
     $(window).click(function(event){
-        if(event.target == $("#landing-page")){
+        if(event.target === $("#landing-page")){
             datalist.hide();
         }
         if (event.target === $('#filterModal')[0])
@@ -53,7 +53,7 @@ function hideFilterModal()
 {
     let input = $("#landing-input");
     let datalist = $("#boroughs");
-    $("#filterModal").hide()
+    $("#filterModal").hide('fast')
     input.focus();
     console.log(datalist);
     datalist.show('slow')
