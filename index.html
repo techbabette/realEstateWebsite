@@ -55,7 +55,7 @@
                                   </select>
                               </div>
                               <div class="col-lg-6 modal-holder">
-                                  <label class="modal-label " for="Sorting">Sorting</label>
+                                  <label class="modal-label" for="Sorting">Sorting</label>
                                       <select class="w-100 modal-input" type="number" name="Sorting" id="Sorting">
                                           <!--In the future, generate options dynamically-->
                                           <option selected="selected" disabled value="0">Select an option</option>
@@ -76,31 +76,34 @@
                                   </div>
                               </div>
                               <div class="col-lg-6 modal-holder">
-                                <label class="modal-label" for="PriceMi">Minimum price</label>
+                                <label class="modal-label" for="PriceMi">Minimum price in dollars</label>
                                 <div>
-                                    <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="PriceMi" id="PriceMi">
+                                    <input class="w-100 modal-input" type="number" step="5" min="20" max="" name="PriceMi" id="PriceMi">
                                 </div>
                             </div>
                             <div class="col-lg-6 modal-holder">
-                              <label class="modal-label" for="PriceMa">Maximum price</label>
+                              <label class="modal-label" for="PriceMa">Maximum price in dollars</label>
                               <div>
-                                  <input class="w-100 modal-input" type="number" step="5" min="20" max="10000" name="PriceMa" id="PriceMa">
+                                  <input class="w-100 modal-input" type="number" step="5" min="20" max="" name="PriceMa" id="PriceMa">
                               </div>
                           </div>
                               <div class="col-lg-6 modal-holder">
                                   <button class="w-100 modal-button btn btn-danger">Close</button>
                               </div>
                               <div class="col-lg-6 modal-holder">
-                                  <button class="w-100 modal-button btn btn-success" type="submit">Apply filters</button>
+                                  <button class="w-100 modal-button btn btn-success" id="landing-apply" type="submit">Apply filters</button>
                               </div>
                           </div>
                           </form>
                         </div>
-                        <div id="landing-search-icon">
+                          <div id="landing-search-icon">
                             <i class="mk-icon fa-solid fa-magnifying-glass"></i>
+                          </div>
+                          <input class="search-input" type="text" list="boroughs" name="" id="landing-input" placeholder="Brooklyn" aria-autocomplete="list"/>
+                          <a href="" id="landing-filter" class="mk-button mk-text-center">Filters</a>
+                          <div id="boroughs">
+                          </div>
                         </div>
-                        <input class="search-input" type="text" name="" id="landing-input" placeholder="Brooklyn" aria-autocomplete="list">
-                        <a href="" id="landing-filter" class="mk-button mk-text-center">Filters</a>
                     </div>
                 </div>
               </div>

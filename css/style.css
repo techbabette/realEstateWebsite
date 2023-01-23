@@ -140,6 +140,23 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover, *{
     padding-left: 30px !important;
     height: 5vh;
 }
+#landing-search-holder{
+    height: 5vh;
+    margin-top: 2vh;
+}
+#boroughs{
+    top: 5vh;
+    display: none;
+    position: absolute;
+    background-color: var(--holder-color);
+    width: 100%;
+}
+#boroughs a{
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    height: 2vh;
+}
 .mk-button{
     background-color: var(--action-color);
     text-decoration: none;
@@ -181,6 +198,9 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover, *{
     height: 5vh;
     display: flex;
     align-items: center;
+}
+.modal-holder input, .modal-holder select{
+    height: 5vh;
 }
 @media screen and (min-width: 768px){
 
