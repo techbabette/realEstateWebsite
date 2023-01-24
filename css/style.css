@@ -149,13 +149,16 @@ h1,h2,p,a:hover,.h4:hover, #text-logo:hover, *{
     display: none;
     position: absolute;
     background-color: var(--holder-color);
+    border: 0.5px solid var(--action-color);
+    border-top: 0px;
     width: 100%;
 }
-#boroughs a{
+#boroughs a, #boroughs p{
     text-decoration: none;
     text-align: center;
     padding: 20px;
     height: 2vh;
+    margin-bottom: 0px;
 }
 #boroughs a:hover{
     background-color: var(--strong-accent);

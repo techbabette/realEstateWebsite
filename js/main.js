@@ -1,13 +1,22 @@
+let places = [{name: 'Brooklyn', amount:"5"}, {name: 'The Bronx', amount:"4"}, {name: 'Manhattan', amount:"3"}, {name: 'Queens', amount:"2"}, {name: 'Staten Island', amount:"1"}]
 $(window).ready(function(){
     let input = $("#landing-input");
     let filters = $("#landing-filter");
     let datalist = $("#boroughs");
     let apply = $("#landing-apply");
-    fillDataList();
+    fillDataList(places);
     filters.hide();
     input.click(function(){showFilterButton()});
     input.blur(function(){hideFilterButton()});
     input.focusout(function(){datalist.hide('fast')})
+    input.on("input",(function()
+    {
+        console.log("Hello world");
+        let unos = this.value;
+        filteredList = places.filter(function(el){if(el.name.toUpperCase().indexOf(unos.trim().toUpperCase())!= -1){return el}});
+        fillDataList(filteredList)
+        datalist.show('fast');
+    }))
     apply.click(function(event){event.preventDefault();hideFilterModal()});
     filters.click(function(event){event.preventDefault();showFilterModal()});
     $(window).click(function(event){
@@ -59,21 +68,25 @@ function hideFilterModal()
     datalist.show('slow')
     console.log(datalist);
 }
-function fillDataList()
+function fillDataList(placeList)
 {
     let datalist = document.querySelector("#boroughs")
     datalist.innerHTML = "";
-    let places = new Array('Brooklyn', 'The Bronx', 'Manhattan', 'Queens', 'Staten Island'), numbers = new Array('5', '4', '3', '2', '1');
-    for(place in places)
+    if(placeList.length == 0)
     {
-        if(place == "1");
+        let option = document.createElement("p");
+        option.classList.add("mk-text-center")
+        option.innerText = `No listings found that match your search paramaters`;
+        datalist.appendChild(option);
+    }
+    else{
+        for(place in placeList)
         {
-            console.log(place);
-            let option = document.createElement("a");
-            option.href = "#";
-            option.classList.add("mk-text-center")
-            option.innerText = `${places[place]} (${numbers[place]})`;
-            datalist.appendChild(option);
+                let option = document.createElement("a");
+                option.href = "#";
+                option.classList.add("mk-text-center")
+                option.innerText = `${placeList[place].name} (${placeList[place].amount})`;
+                datalist.appendChild(option);
         }
     }
 }
