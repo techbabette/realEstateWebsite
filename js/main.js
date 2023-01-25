@@ -1,4 +1,4 @@
-let places = [{name: 'Brooklyn', amount:"5"}, {name: 'The Bronx', amount:"4"}, {name: 'Manhattan', amount:"3"}, {name: 'Queens', amount:"2"}, {name: 'Staten Island', amount:"1"}]
+let places = [{name: 'Brooklyn', amount:"5"}, {name: 'The_Bronx', amount:"4"}, {name: 'Manhattan', amount:"3"}, {name: 'Queens', amount:"2"}, {name: 'Staten_Island', amount:"1"}]
 $(window).ready(function(){
     let input = $("#landing-input");
     let filters = $("#landing-filter");
@@ -98,7 +98,7 @@ function fillDataList(placeList)
                 })
                 option.classList.add("mk-text-center")
                 option.value = `${placeList[place].name}`;
-                option.innerText = `${placeList[place].name} (${placeList[place].amount})`;
+                option.innerText = `${placeList[place].name.replaceAll("_", " ")} (${placeList[place].amount})`;
                 datalist.appendChild(option);
         }
     }
