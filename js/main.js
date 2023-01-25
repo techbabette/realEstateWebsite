@@ -4,19 +4,26 @@ $(window).ready(function(){
     let filters = $("#landing-filter");
     let datalist = $("#boroughs");
     let apply = $("#landing-apply");
+    let form = document.querySelector("#landing-form");
     fillDataList(places);
-    filters.hide();
-    input.click(function(){showFilterButton()});
-    input.blur(function(){hideFilterButton()});
     input.focusout(function(){datalist.hide('fast')})
+    input.on("click",function(){
+        datalist.show('fast');
+    })
     input.on("input",(function()
     {
-        console.log("Hello world");
         let unos = this.value;
         filteredList = places.filter(function(el){if(el.name.toUpperCase().indexOf(unos.trim().toUpperCase())!= -1){return el}});
         fillDataList(filteredList)
         datalist.show('fast');
     }))
+    input.keydown(function(event){
+        if(event.which === 13){
+            event.preventDefault();
+            input.val(datalist.children().first().val());
+            form.submit();
+        }
+    })
     apply.click(function(event){event.preventDefault();hideFilterModal()});
     filters.click(function(event){event.preventDefault();showFilterModal()});
     $(window).click(function(event){
@@ -83,8 +90,14 @@ function fillDataList(placeList)
         for(place in placeList)
         {
                 let option = document.createElement("a");
+                let form = document.querySelector("#landing-form");
                 option.href = "#";
+                option.addEventListener("click", function(event){
+                    event.preventDefault();
+                    form.submit();
+                })
                 option.classList.add("mk-text-center")
+                option.value = `${placeList[place].name}`;
                 option.innerText = `${placeList[place].name} (${placeList[place].amount})`;
                 datalist.appendChild(option);
         }

@@ -38,12 +38,12 @@
     <div id="landing-page" class="mk-page page container-fluid">
         <div class="row mk-clear">
             <div class="col-12">
-              <div class="mk-introduction d-flex flex-column justify-content-center">
+              <form id="landing-form" class="mk-introduction d-flex flex-column justify-content-center">
                 <h2 id="search-header">Find your next NYC property</h2>
                 <div id="search-holder">
                     <div id="landing-input-holder" class="w-100">
                         <div class="mk-modal" id="filterModal">
-                          <form class="mk-modal-content container-fluid">
+                          <div class="mk-modal-content container-fluid">
                             <div class="row">
                               <div class="col-lg-6 modal-holder">
                                   <label class="modal-label" for="type">Property type</label>
@@ -94,18 +94,18 @@
                                   <button class="w-100 modal-button btn btn-success" id="landing-apply" type="submit">Apply filters</button>
                               </div>
                           </div>
-                          </form>
+                        </div>
                         </div>
                           <div id="landing-search-icon">
                             <i class="mk-icon fa-solid fa-magnifying-glass"></i>
                           </div>
-                          <input class="search-input" type="text" list="boroughs" name="" id="landing-input" placeholder="Brooklyn" aria-autocomplete="list"/>
+                          <input class="search-input" type="text" list="boroughs" name="borough" id="landing-input" placeholder="Brooklyn" aria-autocomplete="list"/>
                           <a href="" id="landing-filter" class="mk-button mk-text-center">Filters</a>
                           <div id="boroughs">
                           </div>
                         </div>
                     </div>
-                </div>
+                  </form>
               </div>
             </div>
           </div>
