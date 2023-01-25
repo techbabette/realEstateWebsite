@@ -20,6 +20,7 @@ $(window).ready(function(){
     input.keydown(function(event){
         if(event.which === 13){
             event.preventDefault();
+            //TODO: If datalist is not visible, do nothing
             input.val(datalist.children().first().val());
             form.submit();
         }
