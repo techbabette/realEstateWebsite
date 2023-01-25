@@ -1,4 +1,4 @@
-let places = [{name: 'Brooklyn', amount:"5"}, {name: 'The_Bronx', amount:"4"}, {name: 'Manhattan', amount:"3"}, {name: 'Queens', amount:"2"}, {name: 'Staten_Island', amount:"1"}]
+let places = [{name: 'Brooklyn', amount:"5"}, {name: 'The Bronx', amount:"4"}, {name: 'Manhattan', amount:"3"}, {name: 'Queens', amount:"2"}, {name: 'Staten Island', amount:"1"}]
 $(window).ready(function(){
     let input = $("#landing-input");
     let filters = $("#landing-filter");
@@ -27,9 +27,6 @@ $(window).ready(function(){
     apply.click(function(event){event.preventDefault();hideFilterModal()});
     filters.click(function(event){event.preventDefault();showFilterModal()});
     $(window).click(function(event){
-        if(event.target === $("#landing-page")){
-            datalist.hide();
-        }
         if (event.target === $('#filterModal')[0])
         {
             $("#filterModal").hide('fast')
@@ -83,7 +80,7 @@ function fillDataList(placeList)
     {
         let option = document.createElement("p");
         option.classList.add("mk-text-center")
-        option.innerText = `No listings found that match your search paramaters`;
+        option.innerText = `No listings found`;
         datalist.appendChild(option);
     }
     else{
@@ -91,14 +88,16 @@ function fillDataList(placeList)
         {
                 let option = document.createElement("a");
                 let form = document.querySelector("#landing-form");
+                let input = document.querySelector("#landing-input");
                 option.href = "#";
-                option.addEventListener("click", function(event){
-                    event.preventDefault();
-                    form.submit();
-                })
                 option.classList.add("mk-text-center")
                 option.value = `${placeList[place].name}`;
-                option.innerText = `${placeList[place].name.replaceAll("_", " ")} (${placeList[place].amount})`;
+                option.addEventListener("mousedown", function(event){
+                    event.preventDefault();
+                    input.value = option.value;
+                    form.submit();
+                })
+                option.innerText = `${placeList[place].name} (${placeList[place].amount})`;
                 datalist.appendChild(option);
         }
     }
